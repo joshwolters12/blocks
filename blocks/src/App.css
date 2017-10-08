@@ -1,0 +1,74 @@
+.App {
+  text-align: center;
+  min-width: 600px;
+  min-height: 600px;
+  box-sizing: border-box;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+#gameboard{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+
+/* Dock */
+.dock_container{
+  width: 100%;
+  height: 150px;
+  width: 400px;
+  border: 1px solid black;
+  align-self: center;
+}
+
+.board_container{
+  border: 1px black solid;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.row_container{
+  border: 1px red solid;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.slot{
+  border: 1px blue solid;
+  width: 100%;
+}
+
+.slot:hover{
+  background-color: gray;
+}
+
+/* .row_ctonaer */
