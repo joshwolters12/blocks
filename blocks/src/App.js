@@ -8,6 +8,7 @@ class App extends Component {
   constructor(){
     super();
     this.state={
+      dock:[null, null, null],
       //0 = empty slot | 1 = full slot
       board:[
         [0,0,0,0,0,0,0,0,0,0], //1

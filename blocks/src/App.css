@@ -38,25 +38,55 @@
 
 
 /* Dock */
-.dock_container{
-  width: 100%;
-  height: 150px;
-  width: 400px;
+.dock{
+  height: 240px;
+  width: 800px;
   border: 1px solid black;
-  align-self: center;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.dock_container{
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Block */
+.block{
+  width: 210px;
+  height: 210px;
+  align-items: center;
+}
+.block_clear{
+  width: 40px;
+  height: 40px;
+  float: left;
+  background-color: none;
+  border:1px none solid;
+}
+.block_filled{
+  width: 40px;
+  height: 40px;
+  float: left;
+  background-color: gray;
+  border:1px black solid;
 }
 
 .board_container{
   border: 1px black solid;
-  width: 400px;
-  height: 400px;
+  width: 420px;
+  height: 420px;
   display: flex;
   flex-direction: column;
   align-self: center;
 }
 
 .row_container{
-  border: 1px red solid;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -64,11 +94,19 @@
 
 .slot{
   border: 1px blue solid;
-  width: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+.slot_filled{
+  border: 1px blue solid;
+  width: 40px;
+  height: 40px;
+  background-color: orange;
 }
 
 .slot:hover{
   background-color: gray;
 }
 
-/* .row_ctonaer */
+/* .row_container */
