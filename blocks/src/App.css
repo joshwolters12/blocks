@@ -67,7 +67,6 @@
   height: 40px;
   float: left;
   background-color: none;
-  border:1px none solid;
 }
 .block_filled{
   width: 40px;
@@ -75,25 +74,26 @@
   float: left;
   background-color: gray;
   border:1px black solid;
+  box-sizing: border-box;
 }
 
 .board_container{
   border: 1px black solid;
-  width: 420px;
-  height: 420px;
+  width: 400px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-self: center;
 }
 
 .row_container{
-  height: 100%;
   display: flex;
   flex-direction: row;
 }
 
 .slot{
   border: 1px blue solid;
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
 }
