@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Board from './components/Board.js';
 import Dock from './components/Dock.js';
@@ -23,12 +22,31 @@ class App extends Component {
         [0,0,0,0,0,0,0,0,0,0]
       ]
     }
+    this.checkBlockFit = this.checkBlockFit.bind(this);
   }
+  checkBlockFit(){
+    let snapParam = 20;
+    let boardPositions = []
+    document.querySelectorAll(".slot").forEach((e)=>{
+      boardPositions.push([e.getBoundingClientRect().x-snapParam,
+              e.getBoundingClientRect().x+snapParam,
+              e.getBoundingClientRect().y-snapParam,
+              e.getBoundingClientRect().y+snapParam,
+              ]);
+    });
+    console.log(boardPositions)
+    let blocks = [];
+    document.querySelectorAll(".block_filled").forEach((e)=>{
+      console.log(e)
+      blocks.push([e.getBoundingClientRect().x, e.getBoundingClientRect().y]);
+    })
+  }
+  
   render() {
     return (
       <div className="App">
        <div id="gameboard">
-         <Dock />
+         <Dock checkBlockFit = {this.checkBlockFit}/>
          <Board />
        </div>
       </div>

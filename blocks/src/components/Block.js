@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Slot from './Slot.js'
 import blockTypes from '../templates/block_types.js'
 import Draggable from 'react-draggable';
 
 class Block extends Component {
   constructor(){
     super()
-    this.checkPosition = this.checkPosition.bind(this)
+    this.checkPosition = this.checkPosition.bind(this);
   }
   checkPosition(){
     var node = ReactDOM.findDOMNode(this);
@@ -32,10 +31,10 @@ class Block extends Component {
     return (
       <Draggable
         onDrag={this.checkPosition}
+        onStop={this.props.checkBlockFit}
       >
       <div className="block">
         {renderBlock}
-        HII
       </div>
       </Draggable>
     );

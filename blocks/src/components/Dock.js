@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Slot from './Slot.js';
 import Block from './Block.js';
 
 class Dock extends Component {
@@ -7,13 +6,19 @@ class Dock extends Component {
     return (
       <div className="dock">
         <div className="dock_container" id="dock1">
-          <Block />
+          <Block 
+            checkBlockFit={this.props.checkBlockFit}
+          />
         </div>
         <div className="dock_container" id="dock2">
-          <Block />
+          <Block 
+            checkBlockFit={this.props.checkBlockFit}
+          />
         </div>
         <div className="dock_container" id="dock3">
-          <Block />
+          <Block 
+            checkBlockFit={this.props.checkBlockFit}
+          />
         </div>
       </div>
     );
