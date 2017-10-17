@@ -10,7 +10,7 @@ class App extends Component {
       dock:[null, null, null],
       //0 = empty slot | 1 = full slot
       board:[
-        [0,0,0,0,0,0,0,0,0,0], //1
+        [0,0,0,0,1,0,0,0,0,0], //1
         [0,0,0,0,0,0,0,0,0,0], //2
         [0,0,0,0,0,0,0,0,0,0], //3
         [0,0,0,0,0,0,0,0,0,0], //4
@@ -25,10 +25,10 @@ class App extends Component {
     this.checkBlockFit = this.checkBlockFit.bind(this);
   }
   checkBlockFit(){
-    let snapParam = 20;
     let boardPositions = []
     document.querySelectorAll(".slot").forEach((e)=>{
-      boardPositions.push([e.getBoundingClientRect().x-snapParam,
+      boardPositions.push([
+              e.getBoundingClientRect().x-snapParam,
               e.getBoundingClientRect().x+snapParam,
               e.getBoundingClientRect().y-snapParam,
               e.getBoundingClientRect().y+snapParam,
